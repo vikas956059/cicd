@@ -1,0 +1,16 @@
+on: push
+name: Transfer Files
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+    - name: FTP-Deploy-Action
+      uses: easingthemes/ssh-deploy@v2.1.5
+      with:
+       SSH_PRIVATE_KEY: secrets 
+       SOURCE: "./"
+       REMOTE_HOST: https://cicd.datanethosting.com 
+       REMOTE_USER: cicddatanethosti 
+       TARGET: /home/cicddatanethosti
