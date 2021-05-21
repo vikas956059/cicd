@@ -5,8 +5,9 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-     - name: FTP-Deploy-Action
-       uses: appleboy/ssh-action@main
+    - uses: actions/checkout@v2.1.0
+    - name: FTP-Deploy-Action
+      uses: easingthemes/ssh-deploy@v2.1.5
       with:
         host: https://cicd.datanethosting.com 
         username: cicddatanethosti
