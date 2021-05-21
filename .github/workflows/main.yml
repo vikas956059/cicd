@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2.1.0
     - name: FTP-Deploy-Action
-      uses: appleboy/ssh-action@master
+      uses: easingthemes/ssh-deploy@master
       with: 
        SOURCE: "./"
        host: cicd.datanethosting.com 
