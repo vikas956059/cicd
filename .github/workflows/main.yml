@@ -7,10 +7,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2.1.0
     - name: FTP-Deploy-Action
-      uses: easingthemes/ssh-deploy@v2.1.5
-      with:
-       SSH_PRIVATE_KEY: secrets 
+      uses: appleboy/ssh-action@main
+      with: 
        SOURCE: "./"
-       REMOTE_HOST: cicd.datanethosting.com 
-       REMOTE_USER: cicddatanethosti 
-       TARGET: /home/cicddatanethosti
+       host: cicd.datanethosting.com 
+       username: cicddatanethosti 
+       password: ((*u3u23dhwkdj#$
+       port: 22
