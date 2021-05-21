@@ -11,5 +11,5 @@ jobs:
       with:
        REMOTE_HOST: https://cicd.datanethosting.com 
        REMOTE_USER: cicddatanethosti
-       TARGET: ut81WRD+MgPg
+       REMOTE_PASSWORD: ut81WRD+MgPg
        SOURCE: "./"
