@@ -13,4 +13,4 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H SSH_HOST  >> ~/.ssh/known_hosts
       - name: Deploy with rsync
-        run: rsync -avz ./ cicddatanethosti@SSH_HOST :/home/cicddatanethosti/public_html
+        run: rsync -avz ./ cicddatanethosti@165.232.184.154 :165.232.184.154public_html
