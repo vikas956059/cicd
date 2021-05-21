@@ -16,4 +16,4 @@ jobs:
           REMOTE_USER: cicddatanethosti 
           REMOTE_PORT: 22
           SOURCE: "./"
-          TARGET: /home/cicddatanethosti 
+          TARGET: /home/cicddatanethosti/public_html 
