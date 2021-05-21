@@ -11,6 +11,6 @@ jobs:
       with:
        SSH_PRIVATE_KEY: secrets 
        SOURCE: "./"
-       REMOTE_HOST: https://cicd.datanethosting.com 
+       REMOTE_HOST: https://165.232.184.154
        REMOTE_USER: cicddatanethosti 
        TARGET: /home/cicddatanethosti
