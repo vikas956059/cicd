@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/cicddatanethosti/public_html/
+    - export DEPLOYPATH=/home/cicddatanethosti/public_html/cice
     - /bin/cp * $DEPLOYPATH
