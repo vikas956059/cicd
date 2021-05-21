@@ -1,0 +1,13 @@
+on: push
+name: Transfer Files
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+     - name: FTP-Deploy-Action
+       uses: appleboy/ssh-action@main
+      with:
+        host: https://cicd.datanethosting.com 
+        username: cicddatanethosti
+        password: ut81WRD+MgPg
