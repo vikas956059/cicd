@@ -11,9 +11,9 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        server: ftp://35.154.14.181
-        username: testuser
-        password: 12345
+        ftp-server: ftp://35.154.14.181
+        ftp-username: testuser
+        ftp-password: 12345
         server-dir: /var/www/html/
 
        
