@@ -9,6 +9,7 @@ jobs:
     - name: FTP-Deploy-Action
       uses: easingthemes/ssh-deploy@v2.1.5
       with:
-        host: https://cicd.datanethosting.com 
-        username: cicddatanethosti
-        password: ut81WRD+MgPg
+       REMOTE_HOST: https://cicd.datanethosting.com 
+       REMOTE_USER: cicddatanethosti
+       TARGET: ut81WRD+MgPg
+       SOURCE: "./"
