@@ -1,15 +1,19 @@
-on: push
-name: Transfer Files
+on:
+  push:
+    branches: [ main ]
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-         SSH_PRIVATE_KEY: SECRETS 
-         SOURCE: "./"
-         REMOTE_HOST: 165.232.184.154 
-         REMOTE_USER: cicddatanethosti 
-         TARGET: /home/cicddatanethosti
+      - uses: actions/checkout@v2
+      - name: ssh deploy
+        uses: easingthemes/ssh-deploy@v2.1.4
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
+          REMOTE_HOST: cicd.datanethosting.com 	
+          REMOTE_USER: cicddatanethosti 
+          REMOTE_PORT: 22
+          SOURCE: "./"
+          TARGET: /home/cicddatanethosti 
