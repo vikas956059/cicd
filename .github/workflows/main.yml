@@ -12,9 +12,9 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.4
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
-          REMOTE_HOST: 35.154.14.181 	
-          REMOTE_USER: ec2-user
+          REMOTE_HOST: cicd.datanethosting.com
+          REMOTE_USER: cicddatanethosti
           REMOTE_PORT: 22
           SOURCE: "./"
-          TARGET: /home/ec2-user/test
+          TARGET: /home/cicddatanethosti/public_html
  
