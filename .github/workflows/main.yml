@@ -1,19 +1,16 @@
 on: push
-name: Transfering file
+name: Transfer Files
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: easingthemes/ssh-deploy@v2.1.5
       with:
-        ftp-server: ftp://35.154.14.181
-        ftp-username: testuser
-        ftp-password: 12345
-        server-dir: /var/www/html/
-
-       
+       SSH_PRIVATE_KEY: SECRETS 
+       SOURCE: "./"
+       REMOTE_HOST: 165.232.184.154 
+       REMOTE_USER: cicddatanethosti 
+       TARGET: /home/cicddatanethosti
